@@ -1,0 +1,19 @@
+def is_armstrong_number(num):
+    # Calculate the number of digits in the given number
+    num_str = str(num)
+    num_digits = len(num_str)
+
+    # Calculate the sum of the nth powers of its digits
+    armstrong_sum = sum(int(digit) ** num_digits for digit in num_str)
+
+    # Check if the number is an Armstrong number
+    return armstrong_sum == num
+
+# Test the function with a number
+test_number = 153  # Change this to test a different number
+
+# Check if the number is an Armstrong number
+if is_armstrong_number(test_number):
+    print(f"{test_number} is an Armstrong number.")
+else:
+    print(f"{test_number} is not an Armstrong number.")
